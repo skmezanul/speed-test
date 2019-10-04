@@ -14,7 +14,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && node test.js"
+    "test": "xo && node test.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "cli.js"
@@ -41,10 +43,12 @@
     "meow": "^3.3.0",
     "round-to": "^1.0.0",
     "speedtest-net": "^1.0.3",
-    "update-notifier": "^0.5.0"
+    "update-notifier": "^0.5.0",
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "ava": "0.0.4",
     "xo": "*"
-  }
+  },
+  "snyk": true
 }
